@@ -13,6 +13,8 @@ import Profile from '../pages/Profile';
 import GenericTableView from '../components/GenericTableView';
 import ManageBusiness from '../pages/ManageBusiness';
 import BusinessDetails from '../pages/BusinessDetails';
+import ManageUser from '../pages/ManageUser';
+import UserDetails from '../pages/UserDetails';
 
 function AppRoutes() {
 
@@ -49,21 +51,22 @@ function AppRoutes() {
                 <Route exact path={`/app/users`}>
                     <GenericTableView type="users" />
                 </Route>
+                <Route exact path={`/app/user`}>
+                    <ManageUser isUpdate={false} />
+                </Route>
+                <Route exact path={`/app/user/:userId/edit`}>
+                    <ManageUser isUpdate={true} />
+                </Route>
+                <Route exact path={`/app/user/:userId`}>
+                    <UserDetails />
+                </Route>
                 {/* <Route exact path={`/app/order/create/:type`}>
                     <ManageOrders />
                 </Route>
                 <Route exact path={`/app/order/:orderId`}>
                     <OrderDetails />
                 </Route>
-                <Route exact path={`/app/user`}>
-                    <ManageUsers isUpdate={false} />
-                </Route>
-                <Route exact path={`/app/user/:userId/edit`}>
-                    <ManageUsers isUpdate={true} />
-                </Route>
-                <Route exact path={`/app/user/:userId`}>
-                    <UserDetails />
-                </Route> */}
+                 */}
                 <Route exact path={`/app/profile`}>
                     <Profile />
                 </Route>

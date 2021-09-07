@@ -9,7 +9,7 @@ import useAuthState from '../common/hooks/useAuthState';
 
 import "./styles/login.scss";
 
-const apiQuery = gql`
+const AUTHENTICATE = gql`
       mutation ($userId: String!, $password: String!){
         authenticate(userId: $userId, password: $password) {
             firstName
@@ -64,7 +64,7 @@ function Login() {
     const history = useHistory();
     const { addAuth } = useAuthState();
     const [formData, setFormData] = useState(null);
-    const [userLogin, { loading, data, error }] = useMutation(apiQuery, {
+    const [userLogin, { loading, data, error }] = useMutation(AUTHENTICATE, {
         onError: (err) => {
             Notiflix.Notify.failure('Invalid credentials please try again.', { position: "right-bottom", });
         }
