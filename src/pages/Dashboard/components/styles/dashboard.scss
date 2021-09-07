@@ -1,0 +1,79 @@
+.dashboard-card {
+    margin: 10px;
+    padding: 10px;
+    background-color: #fff;
+    box-shadow: 0px 10.3115px 20.623px rgba(0, 0, 0, 0.15);
+    border-radius: 16px;
+    display: flex;
+}
+
+.dashboard-avatar {
+    height: 64px !important;
+    width: 64px !important;
+    font-size: 1.5em !important;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+.green {
+    background: #2e7d32 !important;
+    color: white;
+}
+
+.blue {
+    background: #0277bd !important;
+    color: white;
+}
+
+.red {
+    background: #c62828 !important; 
+    color: white;
+}
+
+.orange {
+    background: #bf360c !important;
+    color: white;
+}
+
+.dark {
+    background: #37474f !important;
+    color: white;
+}
+
+.dashboard-info-child {
+    flex: 1;
+    line-height: 10%;
+    text-align: right;
+    margin-bottom: 10px;
+
+    p {
+        font-weight: 700;
+    }
+
+    h5 {
+        font-size: 1.3em;
+        font-weight: 300;
+    }
+
+    .redirect-btn {
+        text-decoration: none;
+        color: #1e88e5;
+        font-weight: 700;
+        text-transform: capitalize;
+        margin-top: 20px;
+        margin-bottom: 10px;
+    }
+}
+
+.dashboard-chart-card {
+    margin: 10px;
+    padding: 10px;
+    background-color: #fff;
+    box-shadow: 0px 10.3115px 20.623px rgba(0, 0, 0, 0.15);
+    border-radius: 16px;
+    height: 300px;
+}
+
+.chart-container {
+    padding: 20px;
+}

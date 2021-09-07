@@ -22,6 +22,7 @@ const apiQuery = gql`
             phoneVerified
             roles
             username
+            email
         }
       }
     `
@@ -102,7 +103,7 @@ function Login() {
                 <div id="background-img" className="login-image" ></div>
             </Hidden>
             <div className="login-base-container">
-                <h1>Invit</h1>
+                <h1>{process.env.REACT_APP_NAME}</h1>
                 <Paper className="login-form">
                     <Form
                         schema={formSchema}

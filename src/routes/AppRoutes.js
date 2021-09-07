@@ -9,6 +9,7 @@ import NotFound from '../pages/NotFound';
 import Login from '../pages/Login';
 import ForgotPassword from '../pages/ForgotPassword';
 import Dashboard from '../pages/Dashboard';
+import Profile from '../pages/Profile';
 
 function AppRoutes() {
 
@@ -59,10 +60,10 @@ function AppRoutes() {
                 </Route>
                 <Route exact path={`/app/user/:userId`}>
                     <UserDetails />
-                </Route>
+                </Route> */}
                 <Route exact path={`/app/profile`}>
                     <Profile />
-                </Route> */}
+                </Route>
                 <Route path="*">
                     <NotFound />
                 </Route>

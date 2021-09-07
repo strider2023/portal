@@ -1,0 +1,83 @@
+.headerBase {
+    color: #fff;
+    background: #48a999 !important;
+    box-shadow: none !important;
+}
+
+.title {
+    flex-grow: 1;
+    text-align: center;
+    font-family: 'Pacifico', cursive !important;
+    font-size: 1.5em !important;
+}
+
+.drawer-profile-container {
+    padding-top: 30px;
+    padding-bottom: 30px;
+    padding-left: 10px;
+    padding-right: 10px;
+    background-color: #00796b;
+    color: #fff;
+    text-align: center;
+}
+
+.drawer-profile-avatar {
+    height: 64px !important;
+    width: 64px !important;
+    margin: 0 auto;
+    background: #48a999 !important;
+}
+
+.drawer-profile-name {
+    margin-top: 10px;
+    margin-bottom: 10px;
+    padding: 5px;
+    font-weight: 200 !important;
+}
+
+.drawer-profile-list {
+    margin-top: 30px !important;
+    margin-bottom: 30px !important;
+}
+
+.menu-image {
+    background:url('../../../images/login.jpg');
+    width:70%;
+    height: 70%;
+    position: absolute;
+    left: 0px;
+    bottom: 0px;
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: bottom;
+}
+
+.drawer-list {
+    min-width: 300px;
+}
+
+.drawer-list-link {
+    text-decoration: none;
+    color: #242424;
+}
+
+.drawer-branding-container {
+    position: absolute;
+    left: 0px;
+    bottom: 0px;
+    width: 100%;
+    text-align: center;
+
+    h1 {
+        font-size: 3rem;
+        color: #48a999 !important;
+        font-family: 'Pacifico', cursive !important;
+        font-weight: 400;
+        line-height: 10%;
+    }
+
+    p {
+        color: #bcbcbc;
+        font-weight: 600;
+    }
+}
