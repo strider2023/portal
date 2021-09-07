@@ -1,0 +1,41 @@
+.input-item {
+    margin: 10px !important;
+}
+
+.add-client-dialog-title {
+    background: #48a999 !important;
+    color: #fff;
+}
+
+.add-client-dialog-primary-address {
+    font-size: 18px;
+    color: #48a999;
+    margin-left: 5px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.create-business-container {
+
+    .dialog-app-bar {
+        position: relative;
+        color: #fff;
+        background: #c41c00 !important;
+        box-shadow: none !important;
+    }
+
+    .dialog-title {
+        flex: 1;
+        text-align: center;
+    }
+
+    .data-container {
+        padding: 10px;
+    }
+    
+    .dialog-create-btn {
+        margin-top: 30px;
+        padding: 20px;
+        color: #c62828;
+    }
+}

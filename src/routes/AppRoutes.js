@@ -10,6 +10,9 @@ import Login from '../pages/Login';
 import ForgotPassword from '../pages/ForgotPassword';
 import Dashboard from '../pages/Dashboard';
 import Profile from '../pages/Profile';
+import GenericTableView from '../components/GenericTableView';
+import ManageBusiness from '../pages/ManageBusiness';
+import BusinessDetails from '../pages/BusinessDetails';
 
 function AppRoutes() {
 
@@ -25,23 +28,11 @@ function AppRoutes() {
                 <Route exact path="/app">
                     <Dashboard />
                 </Route>
-                {/* <Route exact path={`/app/orders`}>
-                    <TableView type="order" />
+                <Route exact path={`/app/orders`}>
+                    <GenericTableView type="order" />
                 </Route>
                 <Route exact path={`/app/businesses`}>
-                    <TableView type="business" />
-                </Route>
-                <Route exact path={`/app/rules`}>
-                    <TableView type="rules" />
-                </Route>
-                <Route exact path={`/app/users`}>
-                    <TableView type="users" />
-                </Route>
-                <Route exact path={`/app/order/create/:type`}>
-                    <ManageOrders />
-                </Route>
-                <Route exact path={`/app/order/:orderId`}>
-                    <OrderDetails />
+                    <GenericTableView type="business" />
                 </Route>
                 <Route exact path={`/app/business`}>
                     <ManageBusiness isUpdate={false} />
@@ -51,6 +42,18 @@ function AppRoutes() {
                 </Route>
                 <Route exact path={`/app/business/:businessId`}>
                     <BusinessDetails />
+                </Route>
+                <Route exact path={`/app/rules`}>
+                    <GenericTableView type="rules" />
+                </Route>
+                <Route exact path={`/app/users`}>
+                    <GenericTableView type="users" />
+                </Route>
+                {/* <Route exact path={`/app/order/create/:type`}>
+                    <ManageOrders />
+                </Route>
+                <Route exact path={`/app/order/:orderId`}>
+                    <OrderDetails />
                 </Route>
                 <Route exact path={`/app/user`}>
                     <ManageUsers isUpdate={false} />

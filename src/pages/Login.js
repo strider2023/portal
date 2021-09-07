@@ -71,11 +71,11 @@ function Login() {
     });
 
     if (loading) {
-        return (<div>{'Loading...'}</div>);
+        Notiflix.Loading.dots();
     }
 
     if (data) {
-        console.log(data.authenticate);
+        // console.log(data.authenticate);
         for (const res in data.authenticate) {
             cookies.set(res, data.authenticate[res], { path: '/' });
         }
@@ -89,6 +89,7 @@ function Login() {
             token: cookies.get('token')
         };
         addAuth({ status: 'success', error: null, user });
+        Notiflix.Loading.remove(300);
         history.replace('/app');
     }
 
