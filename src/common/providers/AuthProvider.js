@@ -11,7 +11,7 @@ export const AuthContext = createContext({
 export default function AuthProvider({ children }) {
     const cookies = new Cookies();
     const token = cookies.get('token');
-    const anonymousPaths = ['/', '/forgot-password', '/register'];
+    const anonymousPaths = ['/', '/forgot-password', '/register', '/login'];
 
     const [authState, setAuthState] = useState({ status: 'success', error: null, user: null });
 

@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Container, Paper, Link, Hidden } from '@material-ui/core';
+import { Container, Link, Hidden, Button } from '@material-ui/core';
 import Notiflix from "notiflix";
 import { useMutation, gql } from '@apollo/client';
 import AppForms from '../common/components/AppForms';
@@ -61,7 +61,7 @@ function ForgotPassword() {
     }
 
     if (data) {
-        
+
     }
 
     const handleSubmit = (e) => {
@@ -82,8 +82,10 @@ function ForgotPassword() {
                     formData={formData}
                     spacing={3}
                     onChange={e => setFormData(e.formData)}
-                    onSubmit={handleSubmit} />
-                <Link href="/" variant="body2">
+                    onSubmit={handleSubmit}>
+                    <Button type={"submit"} variant="contained" color="primary" fullWidth className="login-button">Retrieve Password</Button>
+                </AppForms>
+                <Link href="/login" variant="body2">
                     Back to Login
                 </Link>
                 <Link href="/register" className="register-link" variant="body2">

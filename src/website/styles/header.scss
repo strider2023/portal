@@ -1,0 +1,17 @@
+.website-header-container {
+    background-color: white !important;
+
+    h6 {
+        flex-grow: 1;
+        font-family: "Pacifico", cursive !important;
+        font-size: 1.5em !important;
+    }
+
+    .nav-link {
+        text-decoration: none !important;
+    }
+}
+
+.drawer-list {
+    width: 240px;
+}

@@ -16,6 +16,7 @@ import ManageBusiness from '../pages/ManageBusiness';
 import BusinessDetails from '../pages/BusinessDetails';
 import ManageUser from '../pages/ManageUser';
 import UserDetails from '../pages/UserDetails';
+import Home from '../website/Home';
 
 function AppRoutes() {
 
@@ -23,6 +24,9 @@ function AppRoutes() {
         <Router basename="/">
             <Switch>
                 <Route exact path="/">
+                    <Home />
+                </Route>
+                <Route exact path="/login">
                     <Login />
                 </Route>
                 <Route exact path="/forgot-password">

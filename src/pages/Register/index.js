@@ -1,6 +1,5 @@
 import { React, useEffect, useState } from 'react';
-import { useHistory, useParams } from "react-router-dom";
-import Form from "@rjsf/material-ui";
+import { useHistory } from "react-router-dom";
 import { useMutation, gql } from '@apollo/client';
 import Notiflix from "notiflix";
 
@@ -142,7 +141,7 @@ function Register() {
                     onChange={e => setFormData(e.formData)}
                     onSubmit={handleSubmit} />
 
-                <Link href="/" variant="body2">
+                <Link href="/login" variant="body2">
                     Back to Login
                 </Link>
             </div>
