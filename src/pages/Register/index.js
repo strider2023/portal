@@ -3,9 +3,11 @@ import { useHistory, useParams } from "react-router-dom";
 import Form from "@rjsf/material-ui";
 import { useMutation, gql } from '@apollo/client';
 import Notiflix from "notiflix";
-import AppLayout from '../../common/layouts/AppLayout';
 
 import AppForms from '../../common/components/AppForms';
+import { Container, Link } from '@material-ui/core';
+
+import '../styles/register.scss'
 
 const MUTATE_USER = gql`
       mutation ($userId: String!, $password: String!){
@@ -33,8 +35,6 @@ const formSchema = {
         "email",
         "phone",
         "password",
-        "emailVerified",
-        "phoneVerified",
         "roles"
     ],
     "properties": {
@@ -63,19 +63,9 @@ const formSchema = {
             "type": "string",
             "title": "Password"
         },
-        "emailVerified": {
-            "type": "boolean",
-            "title": "Email Verified?",
-            "default": false
-        },
-        "phoneVerified": {
-            "type": "boolean",
-            "title": "Phone Number Verfied?",
-            "default": false
-        },
         "roles": {
             "type": "string",
-            "title": "User Roles",
+            "title": "User Role",
             "enum": [
                 "buyer",
                 "seller"
@@ -112,35 +102,52 @@ const uiSchema = {
     "password": {
         "ui:widget": "password",
         "ui:gridSm": 6
+    },
+    "roles": {
+        "ui:gridSm": 6
     }
 };
 
-function ManageUser(props) {
-    let { userId } = useParams();
+function Register() {
     const history = useHistory();
     const [formData, setFormData] = useState(null);
-    const [userLogin, { loading, data, error }] = useMutation(MUTATE_USER, {
+    const [userRegister, { loading, data, error }] = useMutation(MUTATE_USER, {
         onError: (err) => {
             Notiflix.Notify.failure('Invalid credentials please try again.', { position: "right-bottom", });
         }
     });
 
+    if (loading) {
+        Notiflix.Loading.dots();
+    }
+
+    if (data) {
+        Notiflix.Loading.remove(300);
+        history.replace('/app');
+    }
+
     const handleSubmit = (e) => {
         console.log(formData);
-        // userLogin({ variables: { 'userId': formData.email, 'password': formData.password } });
     }
 
     return (
-        <AppLayout headerTitle={process.env.REACT_APP_NAME} showBack="true">
-            <AppForms
-                schema={formSchema}
-                uiSchema={uiSchema}
-                formData={formData}
-                spacing={3}
-                onChange={e => setFormData(e.formData)}
-                onSubmit={handleSubmit} />
-        </AppLayout>
+        <Container component="main" maxWidth="lg">
+            <div className="register-base-container">
+                <h1>{process.env.REACT_APP_NAME}</h1>
+                <AppForms
+                    schema={formSchema}
+                    uiSchema={uiSchema}
+                    formData={formData}
+                    spacing={3}
+                    onChange={e => setFormData(e.formData)}
+                    onSubmit={handleSubmit} />
+
+                <Link href="/" variant="body2">
+                    Back to Login
+                </Link>
+            </div>
+        </Container>
     )
 }
 
-export default ManageUser
+export default Register

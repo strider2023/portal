@@ -8,6 +8,7 @@ import {
 import NotFound from '../pages/NotFound';
 import Login from '../pages/Login';
 import ForgotPassword from '../pages/ForgotPassword';
+import Register from '../pages/Register';
 import Dashboard from '../pages/Dashboard';
 import Profile from '../pages/Profile';
 import GenericTableView from '../components/GenericTableView';
@@ -26,6 +27,9 @@ function AppRoutes() {
                 </Route>
                 <Route exact path="/forgot-password">
                     <ForgotPassword />
+                </Route>
+                <Route exact path="/register">
+                    <Register />
                 </Route>
                 <Route exact path="/app">
                     <Dashboard />

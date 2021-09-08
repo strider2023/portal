@@ -1,11 +1,11 @@
 import React, { useState } from 'react';
-import Form from "@rjsf/material-ui";
-import { Container, Paper, Hidden } from '@material-ui/core';
+import { Container, Button, Link, Hidden } from '@material-ui/core';
 import { useHistory } from "react-router-dom";
 import Cookies from 'universal-cookie';
 import Notiflix from "notiflix";
 import { useMutation, gql } from '@apollo/client';
 import useAuthState from '../common/hooks/useAuthState';
+import AppForms from '../common/components/AppForms';
 
 import "./styles/login.scss";
 
@@ -28,7 +28,6 @@ const AUTHENTICATE = gql`
     `
 
 const formSchema = {
-    title: "Login",
     type: "object",
     required: [
         "email",
@@ -105,14 +104,22 @@ function Login() {
             </Hidden>
             <div className="login-base-container">
                 <h1>{process.env.REACT_APP_NAME}</h1>
-                <Paper className="login-form">
-                    <Form
-                        schema={formSchema}
-                        uiSchema={uiSchema}
-                        formData={formData}
-                        onChange={e => setFormData(e.formData)}
-                        onSubmit={handleSubmit} />
-                </Paper>
+                <AppForms
+                    className="login-form"
+                    schema={formSchema}
+                    uiSchema={uiSchema}
+                    formData={formData}
+                    spacing={3}
+                    onChange={e => setFormData(e.formData)}
+                    onSubmit={handleSubmit}>
+                    <Button type={"submit"} variant="contained" color="primary" fullWidth className="login-button">Login</Button>
+                </AppForms>
+                <Link href="/forgot-password" variant="body2">
+                    Forgot password?
+                </Link>
+                <Link href="/register" className="register-link" variant="body2">
+                    Register
+                </Link>
             </div>
         </Container>
     )
