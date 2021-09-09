@@ -1,0 +1,28 @@
+.footer-container {
+    background-color: #ececec;
+
+    .footer-logo-holder {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        padding: 20px;
+
+        .footer-logo {
+            width: 48px;
+        }
+
+        h4 {
+            color: #a14235;
+            flex-grow: 1;
+            font-family: "Pacifico", cursive !important;
+        }
+    }
+
+    .footer-links-holder {
+        padding-top: 5vh;
+    }
+
+    .footer-text-holder {
+        padding: 30px;
+    }
+}

@@ -1,13 +1,19 @@
 import React from 'react';
-
+import { Button, Grid, Link } from '@material-ui/core';
 import '../../styles/website-headers.scss'
 
 function WebsiteHeader() {
     return (
         <div className="webiste-header-container">
-            <div className="text-wrap">
-                <h1>ABC</h1>
-            </div>
+            <Grid container className="webiste-header-text-container">
+                <Grid item xs={12} sm={6}>
+                    <div className="webiste-header-text">
+                        <h1>Get quotes from trusted manufacturers across the globe</h1>
+                        <h3>World's #1 sourcing website</h3>
+                        <Button color="primary" variant="outlined" href="/register">Sign Up</Button>
+                    </div>
+                </Grid>
+            </Grid>
             <div className="inner-wrap">
                 <svg className="waves" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 214.5" preserveAspectRatio="xMinYMid meet">
                     <defs>

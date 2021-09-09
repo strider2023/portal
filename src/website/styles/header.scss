@@ -2,9 +2,11 @@
     background-color: white !important;
 
     h6 {
+        color: #a14235;
         flex-grow: 1;
         font-family: "Pacifico", cursive !important;
         font-size: 1.5em !important;
+        cursor: pointer;
     }
 
     .nav-link {
@@ -14,4 +16,53 @@
 
 .drawer-list {
     width: 240px;
+}
+
+.header-logo {
+    width: 24px;
+    margin-right: 10px;
+}
+
+.header-drawer-container {
+    padding-top: 30px;
+    padding-bottom: 30px;
+    padding-left: 10px;
+    padding-right: 10px;
+    background-color: #ef705d;
+    color: #fff;
+    text-align: center;
+
+    .header-drawer-profile-avatar {
+        height: 64px !important;
+        width: 64px !important;
+        margin: 0 auto;
+        background: #a14235;
+    }
+
+    .header-drawer-profile-name {
+        margin-top: 10px;
+        margin-bottom: 10px;
+        padding: 5px;
+        font-weight: 200 !important;
+    }
+
+    .header-drawer-login-btn {
+        color: #a14235;
+        margin-top: 20px;
+    }
+}
+
+.header-drawer-branding-container {
+
+    position: absolute;
+    left: 0px;
+    bottom: 0px;
+    width: 100%;
+    text-align: center;
+
+    h1 {
+        color: #a14235;
+        flex-grow: 1;
+        font-family: "Pacifico", cursive !important;
+    }
 }
